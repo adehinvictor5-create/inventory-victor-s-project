@@ -1,0 +1,31 @@
+SHOP MANAGER - HOW IT WORKS (simple version)
+
+THE FILES AND WHAT EACH ONE DOES
+login.html    The login page. User types email + password.
+signup.html   The sign-up page. First account = admin, the rest = cashier.
+auth.js       The "security guard". Creates accounts, checks passwords,
+              logs people out, and blocks pages you are not allowed to see.
+index.html    A traffic officer. Sends you to login, admin or cashier page.
+admin.html    The boss page: products, all sales, users.
+cashier.html  The worker page: sell products.
+store.js      The "storeroom". Saves and loads products and sales.
+style.css     All the colours and layout.
+
+THE JOURNEY
+1. Sign up  -> auth.js saves you (password is scrambled, never saved plain)
+2. Log in   -> auth.js checks the scrambled password
+3. index.html looks at your role -> admin.html or cashier.html
+4. Log out  -> auth.js forgets you -> back to login.html
+
+HOW TO RUN
+1. Put all files in ONE folder.
+2. Open the folder in VS Code.
+3. Right-click login.html -> Open with Live Server.
+4. First time only: F12 -> Application -> Local Storage -> delete everything.
+
+WORDS YOU MAY MEET IN THE CODE
+localStorage  A small storage box inside the browser.
+function      A named set of instructions. Example: logout()
+getElementById  "Find the thing on the page with this id."
+addEventListener  "When this is clicked, do this."
+async/await   "Wait for this slow job to finish first."
